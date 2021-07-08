@@ -28,6 +28,27 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Emacs Keyboard shortcut</title>
+    <url>/2016/03/26/Emacs-Keyboard-shortcut/</url>
+    <content><![CDATA[<span id="more"></span>
+
+
+<p>emacs filename          打开文件<br>C-x C-c            退出<br>C-x C-f filename    打开文件<br>C-x C-s            保存文件<br>C-x u            取消上一次操作</p>
+<p>q                取消执行<br>C-g                中断，取消当前命令或输入一半的命令</p>
+<p>C-p        上<br>C-n        下<br>C-b        前<br>C-f        后<br>C-a        行首<br>C-e        行尾<br>C-l        重绘屏幕</p>
+<p>C-v        下一页<br>M-v        上一页</p>
+<p>M-f        下一单词<br>M-b        上一单词<br>M-a        句首<br>M-e        句尾</p>
+<p>M-&lt;        档首<br>M-&gt;        档尾</p>
+<p>C-u num cmd     重复执行cmd num次<br>C-u 8 C-f 向右移动8个字符<br>C-u 5 C-n 向下移动5行<br>C-u 10 C-x u  取消10次操作<br>C-u 3 C-v    上翻3行</p>
+<p>C-d         删除光标所在字符<br>M-del    删除前一个单词<br>M-d        删除后一个单词<br>C-k        删除至行尾<br>M-k        删除至句尾</p>
+<p>C-y         粘贴最近一次剪切的内容</p>
+<p>C-z 或者 C-x C-z    挂起emacs，输入fg回到emacs界面</p>
+<p>C+x+2<br>C+x+3<br>C+x+o<br>C+x+1<br>C+M+v</p>
+<p>C+s+内容        向前搜索<br>C+r            向后搜索</p>
+<p>C+@ 在两个位置按下，然后再按C+w，剪切两个位置之间的字符</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Clojure 学习笔记</title>
     <url>/2016/03/23/Clojure-note/</url>
     <content><![CDATA[<span id="more"></span>
@@ -74,27 +95,6 @@
 <p>(macroexpand ‘(my-first-quoted-macro))  ; =&gt; (reverse “Hello World”)  注意reverse不再是一个函数对象，而是一个符号</p>
 <p>宏可以传入参数<br>(defmacro inc2 [arg]<br>  (list + 2 arg))</p>
 <p>(inc2 2)  ; =&gt; 4</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Emacs Keyboard shortcut</title>
-    <url>/2016/03/26/Emacs-Keyboard-shortcut/</url>
-    <content><![CDATA[<span id="more"></span>
-
-
-<p>emacs filename          打开文件<br>C-x C-c            退出<br>C-x C-f filename    打开文件<br>C-x C-s            保存文件<br>C-x u            取消上一次操作</p>
-<p>q                取消执行<br>C-g                中断，取消当前命令或输入一半的命令</p>
-<p>C-p        上<br>C-n        下<br>C-b        前<br>C-f        后<br>C-a        行首<br>C-e        行尾<br>C-l        重绘屏幕</p>
-<p>C-v        下一页<br>M-v        上一页</p>
-<p>M-f        下一单词<br>M-b        上一单词<br>M-a        句首<br>M-e        句尾</p>
-<p>M-&lt;        档首<br>M-&gt;        档尾</p>
-<p>C-u num cmd     重复执行cmd num次<br>C-u 8 C-f 向右移动8个字符<br>C-u 5 C-n 向下移动5行<br>C-u 10 C-x u  取消10次操作<br>C-u 3 C-v    上翻3行</p>
-<p>C-d         删除光标所在字符<br>M-del    删除前一个单词<br>M-d        删除后一个单词<br>C-k        删除至行尾<br>M-k        删除至句尾</p>
-<p>C-y         粘贴最近一次剪切的内容</p>
-<p>C-z 或者 C-x C-z    挂起emacs，输入fg回到emacs界面</p>
-<p>C+x+2<br>C+x+3<br>C+x+o<br>C+x+1<br>C+M+v</p>
-<p>C+s+内容        向前搜索<br>C+r            向后搜索</p>
-<p>C+@ 在两个位置按下，然后再按C+w，剪切两个位置之间的字符</p>
 ]]></content>
   </entry>
   <entry>
@@ -223,7 +223,7 @@
 <p>或者直接<br>git commit –amend -m “新的提交信息”</p>
 <p>提交完修改后，发现工作区有漏掉的文件没有提交，或者想把新修改的文件添加到最新的一次本地commit，你需要：<br>git add .<br>git commit –amend<br>这样，你的漏掉或者新的改动就会提交到最新的一次本地commit</p>
 <p>你的改动现在只保存在本地仓库，执行如下命令可以推送你的改动到远端仓库<br>git push origin master<br>有时可能会push失败，需要（谨慎使用）<br>git push -f origin master<br>强制推送</p>
-<p>如果你没有添加远端仓库地址，你可以执行<br>git remote add origin &lt;<a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;</a>:you_github_name/you_repository_name.git&gt;<br>添加远程仓库地址</p>
+<p>如果你没有添加远端仓库地址，你可以执行<br>git remote add origin &lt;<a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#x6f;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#x6f;&#109;</a>:you_github_name/you_repository_name.git&gt;<br>添加远程仓库地址</p>
 <p>如果远程仓库别人有新的提交，你可以执行：<br>git pull<br>同步到你的本地仓库。第一次pull时，这时候可能会错误，按照错误提示修改一些就好了</p>
 <p>分支（branch）：<br>多人协作工作时，一般会基于主分支创建自己的分支，执行自己的任务。任务完成后再把自己的分支合并到主分支。</p>
 <p>你可以执行如下命令：<br>git branch<br>查看本地分支，或者<br>git branch -a<br>查看本地及远程分支</p>
